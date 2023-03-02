@@ -17,4 +17,4 @@ jobs:
           date
       - name: Print the contents of the current directory
         run: |
-          ls -
+          ls -l
