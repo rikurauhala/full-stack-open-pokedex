@@ -1,5 +1,8 @@
 #!/bin/bash
 
+apt-get update
+apt-get install -y curl
+
 STATUS=$(curl --silent https://pokedex-cicd.fly.dev/health)
 
 if [ "$STATUS" == "ok" ]; then
