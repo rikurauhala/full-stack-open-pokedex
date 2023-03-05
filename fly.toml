@@ -39,7 +39,7 @@ processes = []
     method = "get"
     path = "/health"
     protocol = "http"
-    restart_limit = 10
+    restart_limit = 5
     timeout = 2000
     tls_skip_verify = false
     [services.http_checks.headers]
@@ -48,5 +48,5 @@ processes = []
     command = "./health_check.sh"
     grace_period = "1s"
     interval = "5s"
-    restart_limit = 0
+    restart_limit = 5
     timeout = "1s"
