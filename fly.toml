@@ -1,6 +1,4 @@
-# fly.toml file generated for dawn-bush-583 on 2023-03-04T17:26:51+02:00
-
-app = "dawn-bush-583"
+app = "pokedex-cicd"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
@@ -10,12 +8,6 @@ processes = []
 
 [experimental]
   auto_rollback = true
-
-[deploy]
-  release_command = "npm run build"
-
-[processes]
-  app = "node app.js"
 
 [[services]]
   http_checks = []
