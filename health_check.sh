@@ -11,4 +11,4 @@ if [ "$STATUS" == "ok" ]; then
 fi
 
 printf "Health check failed"
-exit 0
+exit 1
