@@ -32,6 +32,7 @@ jobs:
           start: npm run start-prod
           wait-on: http://localhost:5000
   deploy:
+    needs: [pre-deploy]
     name: Deploy
     runs-on: ubuntu-latest
     if: ${{ github.event_name == 'push' }}
