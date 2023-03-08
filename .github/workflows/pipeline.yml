@@ -36,7 +36,8 @@ jobs:
         if: failure()
         with:
             severity: error
-            description: Build failed! Commit ${{ github.event.head_commit.url }}
+            text: Build failed!
+            description: ${{ github.event.head_commit.url }}
             webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
   deploy:
     needs: [pre-deploy]
@@ -61,7 +62,8 @@ jobs:
         if: failure()
         with:
             severity: error
-            description: Build failed! Commit ${{ github.event.head_commit.url }}
+            text: Build failed!
+            description: ${{ github.event.head_commit.url }}
             webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
   tag:
     needs: [deploy]
