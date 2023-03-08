@@ -55,6 +55,7 @@ jobs:
         if: success()
         with:
             severity: info
+            text: Build succeeded!
             description: Build succeeded!
             webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
       - name: Failure
