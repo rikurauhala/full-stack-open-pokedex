@@ -58,6 +58,7 @@ jobs:
           DEFAULT_BUMP: patch
   webhook:
     name: Discord webhook
+    runs-on: ubuntu-latest
     steps:
       - name: Test Success
         uses: rjstone/discord-webhook-notify@v1
