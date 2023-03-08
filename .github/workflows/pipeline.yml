@@ -31,6 +31,13 @@ jobs:
           command: npm run test:e2e
           start: npm run start-prod
           wait-on: http://localhost:5000
+      - name: Failure
+        uses: rjstone/discord-webhook-notify@v1
+        if: failure()
+        with:
+            severity: error
+            details: Build failed! Commit ${{ github.event.head_commit.url }}
+            webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
   deploy:
     needs: [pre-deploy]
     name: Deploy
