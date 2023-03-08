@@ -36,7 +36,7 @@ jobs:
         if: failure()
         with:
             severity: error
-            details: Build failed! Commit ${{ github.event.head_commit.url }}
+            description: Build failed! Commit ${{ github.event.head_commit.url }}
             webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
   deploy:
     needs: [pre-deploy]
@@ -54,14 +54,14 @@ jobs:
         if: success()
         with:
             severity: info
-            details: Build succeeded!
+            description: Build succeeded!
             webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
       - name: Failure
         uses: rjstone/discord-webhook-notify@v1
         if: failure()
         with:
             severity: error
-            details: Build failed! Commit ${{ github.event.head_commit.url }}
+            description: Build failed! Commit ${{ github.event.head_commit.url }}
             webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
   tag:
     needs: [deploy]
