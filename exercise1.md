@@ -1,0 +1,9 @@
+# 1.11 Warming up
+
+For this essay I chose the Python programming language, as it is the language I am the most familiar with and I might learn something useful by looking more into the CI/CD aspects of Python. For linting the code, a commonly used tool is [pylint](https://pypi.org/project/pylint). Another popular linting tool for Python is [flake8](https://pypi.org/project/flake8). Testing Python applications is usually done with the [pytest](https://docs.pytest.org/en/7.2.x) framework. Compared to TypeScript, Python programs aren't compiled but interpreted. This can lead to errors being not-so-easily noticed during development as run-time errors can be more common with Python, which might present challenges when building a CI/CD pipeline.
+
+In Node.js projects, [npm](https://www.npmjs.com) is used to manage and install dependencies. For Python projects, this can be done with [pip](https://pypi.org/project/pip) or [poetry](https://python-poetry.org). When building a pipeline, one of these should be used to install all dependencies before running the application.
+
+The decision to choose between a self-hosted or a cloud-based environment for the CI/CD pipeline depends on multiple factors such as team size, infrastructure requirements, and security concerns. A self-hosted environment would give the development team more control over the infrastructure and allows for customization. However, this approach requires additional maintenance and resources, which a small team of six people might rather spend working on providing value for the customer. Cloud-based solutions such as GitHub Actions can be easy to setup and get the project started easily. I would just go with GitHub Actions, at least in the beginning.
+
+Another option for continuous integration is [Travis CI](https://www.travis-ci.com).
